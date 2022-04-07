@@ -1,2 +1,2 @@
 # rdd2020
-some relevant files
+some relevant scripts to yolov4darknet
