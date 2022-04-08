@@ -1,5 +1,17 @@
 # Convert PascalVOC Annotations to YOLO
 
+
+"""
+1. The data is taken from https://data.mendeley.com/datasets/5ty2wb6gvg/1
+2. RDD2020 dataset comprising 26,336 road images from India, Japan, and the Czech Republic with more than 31,000 instances of road damage
+3. Here we consider the images from India alone, to reduce complexity
+4. There are four types of road damage: longitudinal cracks (D00), transverse cracks (D10), alligator cracks (D20), and potholes (D40)
+5. The data is present in the PascalVOC format as bounding boxes labelled as xmin, ymin, xmax and ymax, stored as xml files
+6. This has to converted to fomat for Yolov4 is: object-class x y width height
+7. Here object-class is an integer number denoting the class, x y width height - float values relative to width and height of image, it can be equal from (0.0 to 1.0]
+"""
+
+
 import glob
 import os
 import pickle
@@ -61,7 +73,7 @@ def convert_annotation(dir_path, output_path, image_path):
             print("Image problem: ", image_path)
 
 
-dir_path = '/data/train/India'
+dir_path = 'data/train/India'
 classes = ['D00', 'D10', 'D20', 'D40']
 
 def main():
