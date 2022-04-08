@@ -2,4 +2,4 @@ classes = 4
 train = configs/train.txt
 valid = configs/test.txt
 names = configs/obj.names
-backup = training
+backup = /content/drive/MyDrive/train_backup
