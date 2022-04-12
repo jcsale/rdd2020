@@ -1,4 +1,4 @@
-classes = 4
+classes = 1
 train = configs/train.txt
 valid = configs/test.txt
 names = configs/obj.names
